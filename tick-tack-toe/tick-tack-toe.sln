@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tick-tack-toe", "tick-tack-toe\tick-tack-toe.csproj", "{D1440D78-11C5-4222-8ED0-2CB723C5FE19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1440D78-11C5-4222-8ED0-2CB723C5FE19}.Debug|x86.ActiveCfg = Debug|x86
+		{D1440D78-11C5-4222-8ED0-2CB723C5FE19}.Debug|x86.Build.0 = Debug|x86
+		{D1440D78-11C5-4222-8ED0-2CB723C5FE19}.Release|x86.ActiveCfg = Release|x86
+		{D1440D78-11C5-4222-8ED0-2CB723C5FE19}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
