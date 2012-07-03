@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
+using System.Threading;
 
 namespace Server
 {
@@ -14,6 +17,13 @@ namespace Server
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            int MaxThreadsCount = Environment.ProcessorCount * 4;
+            ThreadPool.SetMaxThreads(MaxThreadsCount, MaxThreadsCount);
+            ThreadPool.SetMinThreads(2, 2);
         }
     }
 }
