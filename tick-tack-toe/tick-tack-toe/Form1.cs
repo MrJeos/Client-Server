@@ -13,7 +13,7 @@ namespace tick_tack_toe
     {
         private int[,] Pole = new int[3, 3];
 
-        private const int W = 40, H = 40;
+        private const int W = 60, H = 60;
 
         private System.Drawing.Graphics g;
 
@@ -90,14 +90,38 @@ namespace tick_tack_toe
 
         private void draw_cross(Graphics g, int x, int y)
         {
-            g.DrawLine(Pens.Black, x + 5, y + 5, x + W - 5, y + H - 5);
-            g.DrawLine(Pens.Black, x + W - 5, y + 5, x + 5, y + H - 5);
+            Pen p = new Pen(Brushes.Black, 3);
+            g.DrawLine(p, x + 5, y + 5, x + W - 5, y + H - 5);
+            g.DrawLine(p, x + W - 5, y + 5, x + 5, y + H - 5);
         }
 
         private void draw_nil(Graphics g, int x, int y)
         {
-            g.DrawPie(Pens.Black, x, y, W, H, 0, 360);
-            g.FillPie(Brushes.White, x, y, W, H, 0, 360);
+            Pen p = new Pen(Brushes.Black, 5);
+            g.DrawPie(p, x + 5, y + 5, W - 10, H - 10, 0, 360);
+            g.FillPie(Brushes.White, x + 5, y + 5, W - 10, H - 10, 0, 360);
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox1.Enabled = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            button2.Enabled = true;
+            button4.Enabled = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
         }
     }
 }
